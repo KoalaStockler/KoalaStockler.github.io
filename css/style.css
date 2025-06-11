@@ -1,14 +1,33 @@
+@media (max-width: 768px) {
+    .titulo-nome h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-nome h5 {
+        font-size: 1.2rem;
+    }
+
+    .cartao {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .dados-contato>div {
+        width: 100%;
+    }
+}
+
 * {
-    font-family: 'Calibri', Cambria;
+    font-family: 'Calibri', Cambria, sans-serif;
     box-sizing: border-box;
 }
 
-.titulo-nome > h1 {
+.titulo-nome>h1 {
     font-size: 3rem;
     font-weight: 400;
 }
 
-.titulo-nome > h5 {
+.titulo-nome>h5 {
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -25,27 +44,27 @@
     text-transform: capitalize;
 }
 
-.dados-contato > div {
-    width: 50%;
-    margin: 0 auto;
+.dados-contato>div {
+    width: 100%;
+    max-width: 500px;
     border: 2px solid black;
     border-radius: 20px;
-    box-shadow: 3px 3px 10px rgba(37, 51, 62, 0.3);
+    box-shadow: 3px 3px 10px rgba(37, 51, 62, 0.522);
     display: flex;
     flex-direction: column;
     padding: 10px;
     transition: box-shadow 0.3s ease;
 }
 
-.dados-pessoais > label,
-.dados-contato > label {
+.dados-pessoais>label,
+.dados-contato>div>label {
     margin-top: 5px;
 }
 
-.formacao > h3,
-.experiencia > h3,
-.cursos > h3,
-.projetos > h3 {
+.formacao>h3,
+.experiencia>h3,
+.cursos>h3,
+.projetos>h3 {
     border-bottom: 1px solid #cbd0d4;
     font-size: 1.5rem;
     font-weight: 400;
@@ -73,7 +92,7 @@
 
 .cartao:hover {
     transform: scale(1.015);
-    box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 6px 14px rgba(37, 51, 62, 0.522);
     max-height: 1000px;
 }
 
@@ -91,6 +110,6 @@
     display: block;
 }
 
-.cartao > label > span {
+.cartao>label>span {
     font-weight: bold;
 }
