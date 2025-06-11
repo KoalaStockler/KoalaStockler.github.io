@@ -1,21 +1,96 @@
-.titulo-nome>h1 {
+* {
+    font-family: 'Calibri', Cambria;
+    box-sizing: border-box;
+}
+
+.titulo-nome > h1 {
     font-size: 3rem;
     font-weight: 400;
 }
 
-.titulo-nome>h5 {
+.titulo-nome > h5 {
     font-size: 1.5rem;
     font-weight: 300;
 }
 
-.dados-pessoais, .dados-contato {
+.dados-pessoais,
+.dados-contato {
     display: flex;
     flex-direction: column;
-}
-
-.dados-pessoais, .dados-contato {
     margin-top: 5px;
 }
-.dados-pessoais strong, .dados-contato strong {
+
+.dados-pessoais strong,
+.dados-contato strong {
     text-transform: capitalize;
-} 
+}
+
+.dados-contato > div {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(37, 51, 62, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.dados-pessoais > label,
+.dados-contato > label {
+    margin-top: 5px;
+}
+
+.formacao > h3,
+.experiencia > h3,
+.cursos > h3,
+.projetos > h3 {
+    border-bottom: 1px solid #cbd0d4;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 12px;
+    min-height: 100px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.3s ease;
+    overflow: hidden;
+    justify-content: center;
+    max-height: 200px;
+}
+
+.experiencia .cartao {
+    min-height: 150px;
+    max-height: 250px;
+}
+
+.cartao:hover {
+    transform: scale(1.015);
+    box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.1);
+    max-height: 1000px;
+}
+
+.textinho {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cartao:hover .textinho {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    display: block;
+}
+
+.cartao > label > span {
+    font-weight: bold;
+}
